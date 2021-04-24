@@ -1,0 +1,50 @@
+<!DOCTYPE   >
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="/css/styles.css">
+  <title>Frederiks JokeService</title>
+</head>
+ 
+<body>
+<header>
+
+<div id="contentContainer">
+  
+    <div id="JokeServiceContainer">
+    <h1 id="JokeTitle">JokeService</h1>
+    </div>
+
+<div id="Container1">
+<p id="JokeLabelContainer"> <br> Jokedatabasen:</p>
+
+<div id="DatabaseContainer">
+  <div id="JokeTabel">
+    <ul class = "jokesList">
+      {{#each jokeIterator}}
+      <li id="tableData"> &nbsp; {{setUp}} {{punchLine}}</li>
+      {{/each}}
+    </ol>
+    </div>
+    
+</div>
+</div>
+
+<div id="NewJokeContainer">
+  <div id="newLabel">
+    <p>Tilføj din egen joke:</p>
+  </div>
+  
+  <div id="newData">
+    <form method="POST" action="/" onsubmit="setTimeout(function(){window.location.reload();},10);">
+        <input id="setUpBox" type = "text" name = "inputSet" id = "setupUserJoke" placeholder=" setup">
+        <input id="punchLineBox" type = "text" name = "inputPunch" id = "punchLineUserJoke" placeholder="punch line">
+        <input id="submitButton" type ="submit" value = "Tilføj">
+    </form>
+  </div>
+</div>
+</div>
+
+</header>
+</body>
+</html>
